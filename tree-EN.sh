@@ -10,7 +10,7 @@ color=0
 tput setaf 2; tput bold
 
 # Arbolito
-for ((i=1; i<20; i+=2))
+for ((i=1; i<25; i+=2))
 {
     tput cup $lin $col
     for ((j=1; j<=i; j++))
@@ -32,8 +32,7 @@ for ((i=1; i<=2; i++))
 new_year=$(date +'%Y')
 let new_year++
 tput setaf 1; tput bold
-tput cup $lin $((c - 6)); echo MERRY CHRISTMAS
-tput cup $((lin + 1)) $((c - 10)); echo And lots of CODE in $new_year
+tput cup $lin $((c - 6)); echo Merry Christmas
 let c++
 k=1
 
@@ -59,13 +58,13 @@ while true; do
         color=$(((color+1)%8))
         # Texto flashero
         sh=1
-        for l in C O D E
-        do
-            tput cup $((lin+1)) $((c+sh))
-            echo $l
-            let sh++
-            sleep 0.01
-        done
+#        for l in C O D E
+#        do
+#            tput cup $((lin+1)) $((c+sh))
+#            echo $l
+#            let sh++
+#            sleep 0.01
+#        done
     }
     k=$((k % 2 + 1))
 done
